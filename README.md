@@ -29,7 +29,7 @@ Quarterly Revenue Forecast for Public Companies in A-Share Main-Board Market
    
    Note that in case companies manipulate financial data, set the upper bounds of the forecast error of each company as 0.8.
    
-   ## Manner
+   ### Manner
    
    Base on the Balance Sheet, Income and Cash Flow Statements to filter features related to the revenue and clean data, and divide    data into training and test sets according to time then use regression tree to predict the first half year revenue on cloud 
    platform computing.(Python 3.6 running on Alibaba Cloud ECS with CentOS 7.4 operating system)
