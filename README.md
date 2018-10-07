@@ -1,7 +1,7 @@
 # Financial-forecast
 Quarterly Revenue Forecast for Public Companies in A-Share Main-Board Market
 
-Data Introduction
+### Data Introduction
 
    Financial data refers to the three main kinds of financial reports: Balance Sheet, Income Statement and Cash Flow Statement. 
    These three tables form the basic set of companies’ financial information, which are the foundation of investment analysis.
@@ -18,11 +18,18 @@ Data Introduction
 
    Cash flow statement explains balance sheet. The final change of cash is reflected in Cash and Cash equivalents account. And through the cash flow during operating, investment and financing activities, net profits become into real cash change.
 
-   Evaluation Criteria
+   ### Evaluation Criteria
 
    There consists of two columns – TICKER_SYMBOL.EXCHANGE_CD and Forecasting_Revenue for the file FDDC_financial_submit.csv.
-  
+   The Q1+Q2 revenue forecast of the given company (in millions, accurate to the second decimal place). 
    
-  
+   The results will be compared with the real data released in the financial reports, and the forecast error is calculated as follows:
+   
+   ![image](https://work.alibaba-inc.com/aliwork_tfs/g01_alibaba-inc_com/tfscom/TB18obTrwmTBuNjy1XbXXaMrVXa.tfsprivate.png)
+   
+   Note that in case companies manipulate financial data, set the upper bounds of the forecast error of each company as 0.8.
+   
+   ## Manner
+   
    Base on the Balance Sheet, Income and Cash Flow Statements to filter features related to the revenue and clean data, and divide    data into training and test sets according to time then use regression tree to predict the first half year revenue on cloud 
    platform computing.(Python 3.6 running on Alibaba Cloud ECS with CentOS 7.4 operating system)
